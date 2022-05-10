@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 29 20:06:34 2022
+
+@author: Μαρία
+"""
+
+
+import numpy as np
+import random
+from matplotlib import pyplot as plt
+import math
+
+"3-D"
+N=1000
+M=10000
+s=np.zeros(10)
+np.random.seed(4400)
+limit=1/6
+for j in range(M):
+    r=np.random.random(N)
+    x=500
+    y=500
+    z=500
+    S=np.zeros((N,N,N))
+    S[x][y][z]=1
+    count1=0
+    count2=0
+    for i in range(1,N+1):
+        if r[i-1]<limit:
+            x+=1
+        elif 2*limit>r[i-1]>limit:
+            x-=1
+        elif 3*limit>r[i-1]>2*limit:
+            y+=1
+        elif 4*limit>r[i-1]>3*limit:
+            y-=1
+        elif 5*limit>r[i-1]>4*limit:
+            z+=1
+        elif 1>r[i-1]>5*limit:
+            z-=1
+        if S[x][y][z]==0:
+            S[x][y][z]=1 
+            count2+=1
+        if i%100==0:
+            s[count1]+=count2
+            count1+=1
+smean=s/M
+print(smean)
+t=np.linspace(100,1000,10)
+Stheor=0.66*t
+
+plt.plot(t,Stheor)
+plt.scatter(t,smean)
+plt.xlabel("t")
+plt.ylabel("<S>")
+plt.show()
