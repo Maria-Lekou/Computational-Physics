@@ -19,14 +19,14 @@ d = np.array([0,1,0]) # Down
 s = np.array([0,0,1]) # Strange 
 
 "Raising operators"
-Ip=0.5*(L1+1j*L2) 
-Vp=0.5*(L4+1j*L5)
-Up=0.5*(L6+1j*L7)
+Ip = 0.5*(L1+1j*L2) 
+Vp = 0.5*(L4+1j*L5)
+Up = 0.5*(L6+1j*L7)
 
 "Lowering operators"
-Im=0.5*(L1-1j*L2) 
-Vm=0.5*(L4-1j*L5)
-Um=0.5*(L6-1j*L7)
+Im = 0.5*(L1-1j*L2) 
+Vm = 0.5*(L4-1j*L5)
+Um = 0.5*(L6-1j*L7)
 
 "If vector is real eliminate the 0 imaginary"
 def conv(vector):
