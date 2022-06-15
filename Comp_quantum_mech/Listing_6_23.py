@@ -16,7 +16,7 @@ L8 = np.array ( [ [ 1 , 0 , 0 ] , [ 0 , 1 , 0 ] , [ 0 , 0 , -2 ] ] ) *1/np.sqrt(
 "Quarks"
 u = np.array ([1,0,0]) # Up 
 d = np.array([0,1,0]) # Down 
-s =np.array([0,0,1]) # Strange 
+s = np.array([0,0,1]) # Strange 
 
 "Raising operators"
 Ip=0.5*(L1+1j*L2) 
