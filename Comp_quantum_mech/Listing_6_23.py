@@ -14,7 +14,7 @@ L7 = np.array ( [ [ 0 , 0 , 0 ] , [ 0 , 0 , -1j ] , [ 0 , 1j , 0 ] ] )
 L8 = np.array ( [ [ 1 , 0 , 0 ] , [ 0 , 1 , 0 ] , [ 0 , 0 , -2 ] ] ) *1/np.sqrt( 3 )
 
 "Quarks"
-u = np.array ([1,0,0]) # Up 
+u = np.array([1,0,0]) # Up 
 d = np.array([0,1,0]) # Down 
 s = np.array([0,0,1]) # Strange 
 
